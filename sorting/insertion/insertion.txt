@@ -1,1 +1,3 @@
 Insertion sort
+start from 2nd elemnt
+if 2nd element is less then first like oni left then swap
