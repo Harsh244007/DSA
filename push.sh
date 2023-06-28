@@ -8,5 +8,7 @@ fi
 echo commitMessage
 
 git add .
-git commit -m "* $commitMessage"
+git commit -m "* $commitMessage ."
 git push
+
+echo "Successfully commited with this message : ${commitMessage^}"
