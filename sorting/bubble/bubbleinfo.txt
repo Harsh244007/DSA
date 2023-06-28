@@ -1,0 +1,5 @@
+it sorts elemnt with lopping it with every iteration
+
+so it will iterrate through o2 as it will intertae 2 times of array size
+
+first make an loop which goes -- on every iteraion as it places every sorted thing in end
