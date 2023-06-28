@@ -1,14 +1,15 @@
-#!/bin/bash
-
 if [[ -n "$1" ]]; then
-  commitMessage="$1"
+commitMessage="$1"
 else
-  read -p "Enter the commit message: " commitMessage
+read -p "Enter the commit message: " commitMessage
 fi
-echo commitMessage
+
+for (( i=2; i<=$#; i++ )); do
+commitMessage="$commitMessage ${!i}"
+done
 
 git add .
-git commit -m "* $commitMessage ."
+git commit -m "* ${commitMessage^} ."
 git push
 
-echo "Successfully commited with this message : ${commitMessage^}"
+echo "Successfully committed with this message: ${commitMessage^}"
