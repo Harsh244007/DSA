@@ -5,6 +5,7 @@ if [[ -n "$1" ]]; then
 else
   read -p "Enter the commit message: " commitMessage
 fi
+echo commitMessage
 
 git add .
 git commit -m "* $commitMessage"
