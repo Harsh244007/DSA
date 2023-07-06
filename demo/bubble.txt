@@ -1,0 +1,19 @@
+;[6, 5, 3, 4]
+
+
+var a = [[5, 6, 3, 4], [5, 3, 6, 4],[(5, 3, 4, 6)]]
+
+var 2nd intertaion = 5, 3, 4, 6 => 3,5,4,6=> 3,4,5,6=>
+var 3rd intertaion = 3,4,5,6 => 3,4 => 3,4,5=>3,4,5,6
+
+var 3rd intertaion = 3,4,5,6 => 3,4
+
+" 4 inter"
+"1st inter last elemnt it would in array"
+
+=>
+
+elemt[i] compare => to element+1
+if elemnt[i] if greated element +1 
+swap
+else  elemnt is less then elemnt+1
