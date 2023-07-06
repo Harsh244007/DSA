@@ -1,0 +1,23 @@
+map filter reducer are array methods this are higher order fuction
+
+map transforms each elemnt of array by appling a provide functijn to it
+
+example
+const numbers = [1, 2, 3, 4, 5];
+const doubledNumbers = numbers.map(num => num * 2);
+console.log(doubledNumbers); // Output: [2, 4, 6, 8, 10]
+
+filter creates new array containing only the element whcih statisy the conditions
+
+example
+const numbers = [1, 2, 3, 4, 5];
+const evenNumbers = numbers.filter(num => num % 2 === 0);
+console.log(evenNumbers); // Output: [2, 4]
+
+reduce method applies a function to each elemnt of array resulting in single value
+const numbers = [1, 2, 3, 4, 5];
+const initialvalue=0
+const sum = numbers.reduce((accumulator, currentValue) => accumulator + currentValue, initialvalue);
+console.log(sum); // Output: 15
+
+it takes 2 parameter in function first is store with single value and single value

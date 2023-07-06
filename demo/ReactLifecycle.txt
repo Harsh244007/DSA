@@ -1,0 +1,9 @@
+there 2 react life cycles which this are methods which are invokes in difrent stages\
+
+
+1. componeent didmount it's same as useeffect with empty array  it runs ones component is mounted
+
+2. componentdidupdate it's same as useefect with array dependecies
+
+3. componeentwillunmount useffect with a cleanup function return statment
+

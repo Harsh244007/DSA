@@ -1,0 +1,20 @@
+clousers in js allows a function to access a variable from it's outer lexical scope
+
+clouser are creasted whenever a function is defined inside another function
+
+const outerFunction = () => {
+  const outerVariable = 'Hello';
+
+  const innerFunction = () => {
+    console.log(outerVariable);
+  };
+
+  return innerFunction;
+};
+
+const closureExample = outerFunction();
+closureExample(); // Output: 'Hello'
+
+
+Higher-Order Functions:
+In JavaScript, higher-order functions are functions that either take one or more functions as arguments or return a function as their resul
