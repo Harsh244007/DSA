@@ -1,0 +1,32 @@
+we write something as component
+take this component and translate in to real browser dom 
+this process is called as dom
+
+1. react first creates element form of react elemnts definition 
+consider this as json object has mainly 4 key 
+type 
+props 
+key 
+ref
+
+if we pass a children then it will props and inside of if children key with all the children elemnts and it will recuse to it until it's resolved
+
+2. Construct the dom out of this object with it's reconcilation and diffing algorithms
+
+3. What is Declarative rendering 
+You define how the ui will look based on current state by defining ui elements
+and react takes care of efficiently rendering updating the dom 
+
+what is state in react it's internal data storage mechanish within a component it represent mutable data
+
+4. Reconcilation algorithms it's set of rules that allows react which part of dom 
+
+it's diffing algorithm it's compares virtual dom is kept in memory and browser dom is compared with it
+
+Here's a simplified overview of the diffing process:
+
+    React generates a new Virtual DOM tree based on the component's updated state or props.
+    The diffing algorithm performs a top-down, depth-first traversal of the old and new Virtual DOM trees, comparing each node.
+    React identifies four types of node changes: insertion (new node), deletion (removed node), update (changed node), or reordering (repositioned node).
+    React applies the identified changes to the actual DOM using the minimum required operations. It updates, creates, or removes DOM nodes accordingly.
+    React reconciles child components recursively, applying the diffing algorithm on their respective Virtual DOM trees.
