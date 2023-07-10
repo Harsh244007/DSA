@@ -45,3 +45,13 @@ spring auto wire
  jvm 
 
  spring container
+
+ singleton scope
+
+ prototype scope
+ spring bean
+
+ if you want object from a applicatiojn you need to define as @component
+
+
+ injectting
