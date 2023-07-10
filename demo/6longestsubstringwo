@@ -1,0 +1,26 @@
+let string = "babad";
+let string2 = "cbbd";
+
+function longestpalindrome(s) {
+  let accumulator = 0;
+  let set = new Set();
+  let left = 0;
+  let right = 0;
+
+  while (right < s.length) {
+    let letter = s[right];
+    if (!set.has(letter)) {
+      set.add(letter);
+      accumulator = Math.max(accumulator, set.size);
+      right++;
+    } else {
+      set.delete(s[left]);
+      left++;
+    }
+  }
+
+  return accumulator;
+}
+
+console.log(longestpalindrome(string));
+console.log(longestpalindrome(string2));

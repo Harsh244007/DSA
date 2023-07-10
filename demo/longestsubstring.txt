@@ -1,0 +1,94 @@
+Hello Vidhi,
+
+I couldn't solve Longest Palindrme sbustring question in interview so i give it a try after interview.
+
+1. I relearned how palindrome works.
+answer : let string = "babad";
+let string2 = "bab";
+function palindrome(s) {
+  for (let i = 0; i < s.length / 2; i++) {
+    if (s[i] != s[s.length - 1 - i]) {
+      // here we are dividing string in half and checking if left part is same as right part or not
+      return false;
+    }
+  }
+  return true;
+}
+
+console.log(palindrome(string) ? "It's palindrome" : "It's NOT a palindrome");
+console.log(palindrome(string2) ? "It's palindrome" : "It's NOT a palindrome");
+
+time complexitity = o(n)
+space complexitity = o(1) // constant
+
+2. I relearned how substring works
+
+let string = "harsh";
+let string2 = "sunny";
+
+function substring(s) {
+    let accumulator = []
+  for (let i = 0; i < s.length; i++) {
+    for (let j = i; j < s.length; j++) {
+      let substr = "";
+      for (let k = i; k <= j; k++) {
+        substr = substr + s[k];
+      }
+      accumulator.push(substr)
+    }
+  }
+  return accumulator
+}
+
+console.log(substring(string).join("\n"));
+console.log(substring(string2).join("\n"));
+
+time complexitity = o(n3)
+space complexitity = o(n)
+
+3. Match both and found solution below using two pointer technique.
+
+let string = "babad";
+let string2 = "cbbd";
+
+function longestpalindrome(s) {
+  let accumulator = "";
+  function palindrome(str, left, right) {
+    while (left >= 0 && right < str.length && str[left] == str[right]) {
+      left--;
+      right++;
+    }
+    return str.slice(left + 1, right);
+  }
+  for (let i = 0; i < s.length; i++) {
+    let oddPalindrome = palindrome(s, i, i);
+    let evenPalindrome = palindrome(s, i, i + 1);
+
+    let longestPalindrome =
+      evenPalindrome.length > oddPalindrome.length
+        ? evenPalindrome
+        : oddPalindrome;
+
+    if (longestPalindrome.length > accumulator.length) {
+      accumulator = longestPalindrome;
+    }
+  }
+  return accumulator;
+}
+
+console.log(longestpalindrome(string));
+console.log(longestpalindrome(string2));
+
+time complexitity = o(n2)
+space complexitity = o(n)
+
+it's very tricky here but first i have made one for loop and travelling for odd length and event length i am calling palindrome function which check palindrome and slice me palidrome 
+and at the end i am comparing all the result with accumulator and returning the result.
+
+
+Took me alot of time to understand after interview but i wanted to solve it.
+
+Hope you may consider this for moving to next round.
+
+Thanks,
+Harsh

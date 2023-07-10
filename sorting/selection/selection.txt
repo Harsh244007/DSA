@@ -1,0 +1,27 @@
+[5,4,3,6,7,1]
+
+first outer loop 
+i ==0 
+minimum = 0 
+
+first innner loop 
+j=1 
+
+if ( a[j]<a[minimum])
+if  (4<5){
+    minimum = 1 minimumelement = 4
+}
+
+
+
+babad
+bab
+bababad
+aba substring
+babab
+
+b 
+ba not valid 
+bab it's valid maximum longest substrintg
+baba
+babad

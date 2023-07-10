@@ -13,5 +13,8 @@ function insertion(arr) {
   return arr
 }
 let arra = [6, 1, 2, 3, 4, 5]
+let first  = [1,6,2,3,4,5]
+// let second  = [1,6,2,3,4,5] [1,6,6,3,4,5] current = 2 j= 1 j-- j===0 1>2 arr[j+1]= current a[1]= current [1,2,6,3,4,5]
+// let third  = [1,2,6,3,4,5] current = 3 6>3 j ==2  [1,2,6,6,4,5] current = 3 j-- j==1   2>3    arr[1+1]=current [1,2,3,6,4,5]
 const sort = insertion(arra)
 console.log(sort)

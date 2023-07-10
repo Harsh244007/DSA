@@ -1,0 +1,6 @@
+if we want to ghet exact information about device then we can use this module
+like if we we want to have mac related functionaly 
+or device relatted function then we use this 
+
+weneed to import this from of module
+os.arch i't function which will tell us device architecture

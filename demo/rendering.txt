@@ -30,3 +30,10 @@ Here's a simplified overview of the diffing process:
     React identifies four types of node changes: insertion (new node), deletion (removed node), update (changed node), or reordering (repositioned node).
     React applies the identified changes to the actual DOM using the minimum required operations. It updates, creates, or removes DOM nodes accordingly.
     React reconciles child components recursively, applying the diffing algorithm on their respective Virtual DOM trees.
+
+
+    diffing algorithms rules.
+
+    1. diffrent types of component
+
+    2 same element when react finds same dom ements and update the sty;e

@@ -1,0 +1,38 @@
+nodejs is server enviroment for js 
+
+it's you can sasy 90% js with more addeon features like events repl etc.
+repl read evealute print loop it's feature where we can run js on comand line 
+we can use.editor in command to write fukll code
+
+node js has everything event based
+
+you can import events it's inbuit module from node js 
+events.emitter will create a function which will be invoke when that line is executed
+you can see it's generateor producing event in html we can have button
+we can make through api when button will invoke api call and w can have event.emitter and that will invoke 
+this event
+we cna capture this with event.on
+
+
+core modules are inbuild modeuls whcih comes out of box for example fs os events
+file system console.log buffer
+
+global and non global modules
+
+global modules are module which we don't need to import like console and function
+
+non global modules which are not globbaly defined we need to defined to use this fs
+
+fs.writefilesync it will create new file in root directory
+fs.unlinesync
+
+
+path module it's useful to get path of root where we can manage path for fs module 
+path.join is function (__direname ) it will give current directory path
+
+
+if you give path.join second pargument as folder name then it will create that folder path 
+
+which we can use to create new file
+const dirpath = path.join(__dirname,"files")
+fs.writefilesync(direpath+"hello.txt","this is new file)
