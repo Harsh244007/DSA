@@ -1,0 +1,47 @@
+spring framework
+2000 
+
+ejb and pojo
+
+you can integrate with other hibernate 
+
+ spring framework had lot of configuratyion which we needed to do 
+ so they introduced spring boot whcih comes out of the box with lot fo configuration so we can focus more on concvertion
+ coding part
+
+ spring boot it gives production ready application
+
+ startup project
+
+ spring-boot-start-web
+ 
+ spring-boot-start-jdbc java database connectivity
+ to change configurationw e can use application.properties 
+
+ dependency injection it's design pattern
+buy laptop  
+
+abstraction => we can take properties from a class object with new key 
+
+tight coupling and loose coupling
+losse coupling => we
+
+dependency injection container => they will create new object and inject in class
+ @component will generate dependecy from one class to another class
+ @autowired will generate loose coupleg of speciifc object of class
+
+MAVEN
+GRADLE  this are dependecny management tool for java projects maven uses xmx base configutaion
+pom.xml
+
+
+spring auto wire
+
+ we can create mock object for testing if it's loose coupling
+
+
+ spring boot ide
+
+ jvm 
+
+ spring container
