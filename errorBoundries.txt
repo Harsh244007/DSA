@@ -1,0 +1,32 @@
+componentDidCatch 
+
+Error boundaries in React.js are components that catch JavaScript errors in their child components' lifecycles and display fallback UI instead. They help prevent the entire application from crashing due to a single component error.
+
+we can achieve this by using componentDidCatch method in class component
+
+import React, { Component } from 'react';
+
+class ErrorBoundary extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+
+  componentDidCatch(error, errorInfo) {
+    // Update state to display an error message
+    this.setState({ hasError: true });
+    // You can also log the error to an error reporting service
+    console.error(error, errorInfo);
+  }
+
+  render() {
+    if (this.state.hasError) {
+      // Render an error message or fallback UI
+      return <h1>Something went wrong.</h1>;
+    }
+
+    return this.props.children;
+  }
+}
+
+export default ErrorBoundary;

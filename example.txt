@@ -1,0 +1,35 @@
+const arrayElement = [
+  {
+    name: "BrideName",
+    onClick: brideNameOnClick,
+  },
+  {
+    name: "Date of Event",
+    onClick: dateOfEventOnClick,
+  },
+];
+function brideNameOnClick(e) {
+  console.log(e);
+}
+function dateOfEventOnClick(e) {
+  console.log(e);
+}
+
+<div className="MainDivElement"> // parent element 
+arrayElement.map((e, i) => (
+  <input key={i} value={e.name} onClick={e.onClick} />
+));
+</div>
+
+.MainDivElement{
+    
+}
+
+let response=["Venue","Your Name"]
+
+response.map((e,i)=>
+let blankElemnt = `< ${}
+return (
+  
+)
+)

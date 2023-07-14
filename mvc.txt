@@ -1,0 +1,70 @@
+What is mvc?
+
+MVC stands for Model-View-Controller, which is a software architectural pattern commonly used in web development. It separates the application into three interconnected components:
+
+Model: Represents the data and business logic of the application. It manages the data, performs calculations, and defines the rules for manipulating and accessing the data.
+
+View: Represents the user interface of the application. It is responsible for rendering the data to the user and receiving user input. The view is typically concerned with the presentation and visual aspects of the application.
+
+Controller: Acts as an intermediary between the model and the view. It handles user input, updates the model accordingly, and manipulates the view to reflect the changes in the model. The controller contains the logic that governs the flow of the application.
+
+Example
+
+Model: The model would define the data structure for the to-do items and provide methods for adding, updating, and deleting items. It could also include additional logic, such as sorting or filtering the items.
+
+View: The view would render the list of to-do items, provide input fields for adding new items, and buttons or checkboxes for updating or deleting items. It would display the data from the model and handle user interactions.
+
+Controller: The controller would handle the routes and request/response handling in the Node.js/Express.js backend. It would receive requests from the client, interact with the model to perform the necessary operations, and send the updated data back to the client.
+
+// Model
+const todoItems = [
+  { id: 1, title: "Task 1", completed: false },
+  { id: 2, title: "Task 2", completed: true },
+  // ...
+];
+
+// Controller (Node.js with Express.js)
+app.get('/todos', (req, res) => {
+  // Retrieve data from the model and send it to the client
+  res.json(todoItems);
+});
+
+app.post('/todos', (req, res) => {
+  // Add a new item to the model
+  const newItem = { id: 3, title: req.body.title, completed: false };
+  todoItems.push(newItem);
+
+  // Send the updated data back to the client
+  res.json(todoItems);
+});
+
+// View (React component)
+function TodoList() {
+  const [todos, setTodos] = useState([]);
+
+  useEffect(() => {
+    // Fetch data from the server using an HTTP library like Axios
+    axios.get('/todos')
+      .then(response => setTodos(response.data))
+      .catch(error => console.error(error));
+  }, []);
+
+  const handleAddTodo = (title) => {
+    // Send a POST request to the server to add a new item
+    axios.post('/todos', { title })
+      .then(response => setTodos(response.data))
+      .catch(error => console.error(error));
+  };
+
+  return (
+    <div>
+      {todos.map(todo => (
+        <div key={todo.id}>{todo.title}</div>
+      ))}
+      <button onClick={() => handleAddTodo("New Task")}>Add Task</button>
+    </div>
+  );
+}
+
+// Rendering the TodoList component in a React app
+ReactDOM.render(<TodoList />, document.getElementById('root'));
