@@ -1,3 +1,58 @@
+-1. What is lifting up in react
+-> In React, lifting up refers to the process of moving the state or state management from a component down the component tree to a common ancestor component. It is typically done to share state and behavior between multiple child components.
+
+import React, { useState } from 'react';
+
+function ParentComponent() {
+  const [count, setCount] = useState(0);
+
+  const incrementCount = () => {
+    setCount(count + 1);
+  };
+
+  return (
+    <div>
+      <ChildComponent count={count} incrementCount={incrementCount} />
+    </div>
+  );
+}
+
+function ChildComponent(props) {
+  return (
+    <div>
+      <p>Count: {props.count}</p>
+      <button onClick={props.incrementCount}>Increment</button>
+    </div>
+  );
+}
+
+
+0. What is tree shaking?
+-> Tree shaking is a term used in the context of JavaScript module bundlers, such as webpack or Rollup, to describe the process of eliminating unused code (or "dead code") from the final bundled JavaScript file.
+
+it helps on removing unused function classed and variables in js file
+
+01. The difference between console.log(<Component />) and console.log(Component()) lies in how they handle the rendering of React components
+
+1. When you use console.log(<Component />), you are passing a JSX element as an argument to console.log(). This means that you are logging the React component itself (in JSX syntax) to the console. The output in the console will typically show the component's name and its props, but not the rendered result. It is similar to logging an object or any other data type to the console.
+ 
+ function MyComponent() {
+  return <div>Hello, world!</div>;
+}
+
+console.log(<MyComponent />);
+
+2. When you use console.log(Component()), you are calling the Component function and logging its return value to the console. This means that you are logging the result of rendering the component to the console. The output in the console will show the actual rendered content of the component.
+
+function MyComponent() {
+  return <div>Hello, world!</div>;
+}
+
+console.log(MyComponent());
+
+02. What is React.Fragment?
+-> React.Fragment is a built-in component in React that allows you to group multiple elements together without introducing an additional wrapping element in the HTML output. It is a way to return multiple elements from a component without the need for a wrapper <div> or any other parent element.
+
 1. What is React.js?
 -> React.js is a JavaScript library for building user interfaces, specifically for creating reusable UI components.
 
