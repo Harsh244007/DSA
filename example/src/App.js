@@ -97,8 +97,8 @@ const App = () => {
   return (
     <ThemeProvider>
       <>
-      <div className="jbhax"></div>
-      <div className="jbhax2"></div>
+        <div className="jbhax"></div>
+        <div className="jbhax2"></div>
       </>
       <div className="subroot">
         {
