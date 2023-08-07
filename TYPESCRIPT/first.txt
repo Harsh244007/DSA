@@ -1,0 +1,31 @@
+it's used for typesafety in js 
+superset of js
+it gives typesafey and type check
+it's easy tpo refactor and organize typescript code
+highlightying error if other methord is used
+
+npm init -y
+npm install typescript
+tsc yourfilename
+
+watch == true it watches the file change and compile that file
+
+target where js do you wanna compile deleteit and use esnext
+
+
+
+string null number void boolean
+| pipe character
+ ? this make it optional
+
+
+stringnumbe
+
+type interface
+type person ={
+    name :string;
+    age:number;
+    alive:boolean
+}
+
+
