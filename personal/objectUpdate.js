@@ -11,13 +11,13 @@ const firstArray = [
   ];
   
   const idDescriptionMap = new Map(firstArray.map(item => [item.id, item.description]));
-  
-  const updatedSecondArray = secondArray.map(item => {
+
+   secondArray.map(item => {
     if (idDescriptionMap.has(item.id)) {
-      return { ...item, description: idDescriptionMap.get(item.id) };
+  return    item.description= idDescriptionMap.get(item.id)
     }
     return item;
   });
   
-  console.log(updatedSecondArray);
+  console.log(secondArray);
   
